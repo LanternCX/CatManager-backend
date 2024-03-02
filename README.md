@@ -1,6 +1,14 @@
 # 厦一海沧 | 流浪猫管理系统 服务后端
 
-## Starting
+厦门一中海沧校区-校园流浪猫管理系统（2023厦门市学生信息素养提升实践活动参赛作品）
+
+后端方案使用[Spring Boot](https://spring.io/)配合[Mysql](https://www.mysql.com/)搭建
+
+Web前端：[CatManager-frontend](https://github.com/CDBxinhe/CatManager-frontend)
+
+特别鸣谢：[XBigRiceH (Hang XU)](https://github.com/XBigRiceH)
+
+## Quick Start
 ### 环境要求
 * Java **JDK** >= 17.0
 * Maven

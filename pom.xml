@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>tech.xysu.xyhc</groupId>
-    <artifactId>xy_backend</artifactId>
+    <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>厦一学源</name>
-    <description>厦一学源-由厦门一中海沧校区团学技术独立开发维护的学生活动平台</description>
+    <name>厦一海沧 | 校园流浪猫管理平台</name>
+    <description>\在这里觅见你的猫猫学长or猫猫学姐/</description>
     <packaging>war</packaging>
 
     <parent>
