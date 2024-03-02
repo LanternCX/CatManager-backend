@@ -1,9 +1,11 @@
-# 厦一学源 Backend
+# 厦一海沧 | 流浪猫管理系统 服务后端
+
 ## Starting
 ### 环境要求
 * Java **JDK** >= 17.0
 * Maven
 * 一个比较好的网络用以下载项目依赖
+* MySql >= 5.7
 
 ### 编译操作
 * 使用```mvn package -Dmaven.test.skip=true```来**跳过测试**~~(虽然打包上交的项目里也没有)~~并打包最终产物
@@ -16,20 +18,42 @@
 ```properties
 # ==========Spring基础配置==========
 # 后端HTTP监听端口
-server.port=
+server.port=60001
 # 数据库用户名
+# 如 cat
 spring.datasource.username=
 # 数据库密码
+# 如 catcat
 spring.datasource.password=
 # 数据库URL
 # 示例(MYSQL): jdbc:mysql://[数据库地址]:[数据库端口]/[数据库名]?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+# 如 jdbc:mysql://localhost:3306/cat?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
 spring.datasource.url=
-
+# 示例配置中配置了一个运行在本地的MySql服务,使用用户名cat密码catcat,连接到了cat数据库
+# Windows部署MySql环境可使用小皮面板https://www.xp.cn/,CentOS环境建议使用宝塔面板https://www.bt.cn/
+# ==========业务基础配置==========
+# 默认海报地址
+cat.default-poster=https://xuebuxi-imgci.xyget.cn/in1z/542f447a16c95e82ba4f9772bd037656.jpg
+# 默认海报路径
+cat.image-root=
+# ==========Log4j基础配置-一般无需更改==========
+# 主日志等级
+logging.level.root=info
+# WEB日志等级
+logging.level.web=error
+# SQL日志等级
+logging.level.sql=fatal
+# 自身日志等级
+logging.level.tech.xysu.xyhc.xybackend.*=info
+# 日志文件名
+logging.file.name=logs/cat_logs.log
 # ==========其他配置-请勿修改==========
 spring.jpa.open-in-view=false
 spring.jpa.hibernate.ddl-auto=update
 spring.servlet.multipart.max-file-size=10MB
 spring.servlet.multipart.max-request-size=100MB
+spring.mvc.throw-exception-if-no-handler-found=true
+spring.web.resources.add-mappings=false
 ```
 
 #### HTTPS
